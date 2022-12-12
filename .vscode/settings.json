@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c"
+    },
+    "python.testing.pytestArgs": [
+        "hw.py"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
