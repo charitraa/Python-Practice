@@ -1,4 +1,3 @@
-a = input('enter your gf name = ')
-a = int(a) #changing the data type
-
+#check the type of the variable assigned using input() function
+a =input("hey! i m ravi and u ")
 print(type(a))
