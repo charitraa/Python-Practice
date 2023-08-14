@@ -4,12 +4,11 @@ try:
 except:
     istr = -1
 
-
 print('first', istr)
 
 astr = '123'
 try:
-    istr = str(astr)
+    istr = int(astr)
 except:
     istr = -1
 

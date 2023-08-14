@@ -15,6 +15,6 @@ print(live)
 
 # Types of Variable
 
-# 1. String
+# Local
 
-# 2. integer
+# Universal
