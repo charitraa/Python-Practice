@@ -1,4 +1,4 @@
-astr ='hello'
+astr = 'hello'
 try:
     istr = int(astr)
 except:
@@ -14,4 +14,3 @@ except:
     istr = -1
 
 print('second', istr)
-

@@ -10,16 +10,20 @@
     "cSpell.words": [
         "drawshape",
         "garphic",
+        "istr",
         "jesishkhadk",
         "leng",
         "moveturtle",
         "playsound",
         "pyautogui",
+        "ravi",
         "startx",
         "turt"
     ],
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8"
     },
-    "python.formatting.provider": "none"
+    "python.formatting.provider": "none",
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.language": "en,en-GB,en-US,lorem"
 }
