@@ -4,7 +4,7 @@ import random
 import math
 
 tur.setup(900,500)
-tur.title("magic garphic")
+tur.title("magic graphic")
 a1=tur.Turtle()
 b1=tur.Turtle()
 c1=tur.Turtle()

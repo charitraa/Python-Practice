@@ -3,7 +3,7 @@ a = "3333"
 a= int(a)
 print(a+3)
 
-b = "weeeee"
+b = "we"
 #
 # for string , string will be string so , there will be error.
 # a= int(b)

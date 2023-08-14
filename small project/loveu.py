@@ -1,7 +1,7 @@
 from turtle import speed
 
 
-love = 'i love u babita'
+love = 'i love u'
 speed(0.1)
 for i in range(10):
     print(love)

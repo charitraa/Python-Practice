@@ -9,7 +9,7 @@ print('first', istr)
 
 astr = '123'
 try:
-    istr = int(astr)
+    istr = str(astr)
 except:
     istr = -1
 

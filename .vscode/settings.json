@@ -6,5 +6,20 @@
         "hw.py"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "cSpell.words": [
+        "drawshape",
+        "garphic",
+        "jesishkhadk",
+        "leng",
+        "moveturtle",
+        "playsound",
+        "pyautogui",
+        "startx",
+        "turt"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "python.formatting.provider": "none"
 }
