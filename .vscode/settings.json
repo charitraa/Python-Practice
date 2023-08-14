@@ -16,7 +16,9 @@
         "moveturtle",
         "playsound",
         "pyautogui",
+        "pywhatkit",
         "ravi",
+        "sendwhatmsg",
         "shrestha",
         "startx",
         "turt"

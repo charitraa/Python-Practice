@@ -1,4 +1,4 @@
-a=''' dear name,
+a = ''' dear name,
 u r calling from the phone which has broken by u.
 so , please continues your call at any time
 
@@ -10,8 +10,8 @@ so , please continues your call at any time
                                  .........
                                  date: Date
 '''
-b=input('yourname = ')
-c=input('today date =')
-a=a.replace('name', b)
-a=a.replace('Date', c)
+b = input('yourName = ')
+c = input('today date =')
+a = a.replace('name', b)
+a = a.replace('Date', c)
 print(a)

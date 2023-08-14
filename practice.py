@@ -1,4 +1,4 @@
-from turtle import*
-naruto=()
+from turtle import *
+naruto = ()
 
 forward(100)
