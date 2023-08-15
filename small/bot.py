@@ -8,6 +8,3 @@ def Talk(text):
     print(text)
     rabi.say(text)
     rabi.runAndWait()
-
-
-Talk("hello, i am here")
