@@ -23,4 +23,5 @@ else:
             newWords.append(newWords)
         else:
             newWords.append(i[::-1])
+
     print(" ".join(newWords))

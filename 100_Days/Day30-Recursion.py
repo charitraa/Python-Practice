@@ -26,6 +26,7 @@ elif term == 1:
     print(n1)
 # generate fibonacci sequence
 else:
+
     print("Fibonacci sequence:")
     while i < term:
         print(n1)

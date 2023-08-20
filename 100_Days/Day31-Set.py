@@ -4,6 +4,7 @@ print(s)
 # similiar vaalue contain one value
 
 info = {"carla", 19, False, 5.9, 19}
+
 print(info)
 
 
