@@ -6,7 +6,7 @@ def square(n):
     print(n**2)
 
 
-square(5)
+square(4)
 
 
 print(square.__doc__)

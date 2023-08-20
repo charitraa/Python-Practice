@@ -1,5 +1,5 @@
 my = {
-    'name': 'ravi', 'age': 19, 'lname': 'shrestha'
+    'name': 'ravi', 'age': 20, 'lname': 'shrestha'
 }
 
 print(my['name'])

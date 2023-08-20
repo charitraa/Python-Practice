@@ -32,7 +32,7 @@ print(len(country_capitals))  # 3
 
 country_capitals = {
     "United States": "Washington D.C.",
-    "Italy": "Naples"
+    "Italy": "Napales"
 }
 
 # delete item having "United States" key
