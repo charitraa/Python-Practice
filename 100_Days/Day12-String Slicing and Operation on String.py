@@ -1,5 +1,5 @@
 name = "abishek"
-print(name[1:6])
+print(name[::-1])
 print(name[:7])
 # length of character
 print(len(name))
