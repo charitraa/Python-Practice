@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def cube(x):
     return x*x*x
 
@@ -20,3 +23,17 @@ def filter_function(a):
 newl2 = list(filter(filter_function, l))
 
 print(newl2)
+
+
+# reduce
+
+number = [1, 2, 3, 4, 5]
+
+
+def mysum(x, y):
+    return x+y
+
+
+sum = reduce(mysum, number)
+
+print(sum)
