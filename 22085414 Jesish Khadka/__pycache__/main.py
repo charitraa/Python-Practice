@@ -25,7 +25,7 @@ def showequip():
         "No.", "Equipment", "Brand", "Price ($)", "Quantity"
     )
     )
-    f = open("read.txt")
+    f = open("22085414 Jesish Khadka/read.txt")
     data = f.readlines()
     f.close()
     headers = data[0].strip().split(",")
@@ -41,8 +41,10 @@ while True:
         if choice == 1:
             showequip()
         elif choice == 2:
+            showequip()
             rent.renting()
         elif choice == 3:
+            showequip()
             rent_return.returning()
         elif choice == 4:
             print("Thank you for using Dattebayo Welcome Shop!")

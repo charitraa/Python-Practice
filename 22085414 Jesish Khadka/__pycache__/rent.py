@@ -1,13 +1,12 @@
-import main
+
 import datetime
 
 
 def renting():
-    main.showequip()
 
     while True:
         cname = input("Enter your name: ")
-        if (cname == None):
+        if (cname == ""):
             print("Invalid name")
         else:
             break
@@ -19,7 +18,7 @@ def renting():
         eqname = int(
             input("Enter the corresponding number of what you want to rent: ")) - 1
         equipment_data = []
-        with open("read.txt", "r") as file:
+        with open("22085414 Jesish Khadka/read.txt", "r") as file:
             for line in file:
                 no, name, brand, price, quantity = line.strip().split(", ")
                 equipment = {
@@ -65,10 +64,10 @@ def renting():
             value = str(equipments["Quantity"])
 
             # replace the value of quantity in txt file
-            with open('read.txt', 'r') as file:
+            with open('22085414 Jesish Khadka/read.txt', 'r') as file:
                 filedata = file.read()
             filedata = filedata.replace(value, replace)
-            with open('read.txt', 'w')as file:
+            with open('22085414 Jesish Khadka/read.txt', 'w')as file:
                 file.write(filedata)
 
                 # invoice
@@ -81,7 +80,7 @@ def renting():
             Price per 5 days: {equipments['Price']}
             ==============================================
             '''
-            filename = f"{cname}_invoice.txt"
+            filename = f"22085414 Jesish Khadka/{cname}_invoice.txt"
             with open(filename, "a") as filevariable:
                 filevariable.write(invoice)
             print(invoice)  # Print the invoice content
