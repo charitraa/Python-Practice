@@ -81,7 +81,7 @@ def renting():
                 filevariable.write(invoice)
             print(invoice)  # Print the invoice content
 
-            again = input("Would u like to add more Equiment ? yes or no")
+            again = input("Would u like to add more Equiment ? yes or no:")
             if (again.lower() == "yes"):
                 jeish = True
             else:
