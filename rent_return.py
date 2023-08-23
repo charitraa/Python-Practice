@@ -5,7 +5,6 @@ def returning():
             print("Invalid name")
         else:
             break
-    cname = input("Enter your name: ")
     try:
         eqname = int(
             input("Enter the corresponding number of the equipment you want to return: "))-1
@@ -67,7 +66,7 @@ def returning():
             if returnday > days:
                 overduedays = returnday - days
                 overprice = overduedays * 10
-                print(overprice)
+                # print(overprice)
             else:
                 print("")
 

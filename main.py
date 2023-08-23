@@ -36,20 +36,17 @@ def showequip():
 while True:
     topic()
     task()
-    try:
-        choice = int(input("Enter your choice: "))
-        if choice == 1:
-            showequip()
-        elif choice == 2:
-            showequip()
-            rent.renting()
-        elif choice == 3:
-            showequip()
-            rent_return.returning()
-        elif choice == 4:
-            print("Thank you for using Dattebayo Welcome Shop!")
-            break
-        else:
-            print("Please choose a valid number.")
-    except ValueError as e:
-        print("Invalid input. Please enter a valid number.", e)
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        showequip()
+    elif choice == 2:
+        showequip()
+        rent.renting()
+    elif choice == 3:
+        showequip()
+        rent_return.returning()
+    elif choice == 4:
+        print("Thank you for using Dattebayo Welcome Shop!")
+        break
+    else:
+        print("Please choose a valid number.")
