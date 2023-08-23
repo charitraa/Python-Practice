@@ -4,12 +4,17 @@ import datetime
 
 def renting():
     main.showequip()
-    cname = input("Enter your name: ")
+
+    while True:
+        cname = input("Enter your name: ")
+        if (cname == None):
+            print("Invalid name")
+        else:
+            break
+
     jeish = True
     totalprice = 0
-    list = {
 
-    }
     while jeish:
         eqname = int(
             input("Enter the corresponding number of what you want to rent: ")) - 1
