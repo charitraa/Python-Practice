@@ -69,6 +69,15 @@ def returning():
             else:
                 print("")
 
+            replace = str((equipments["Quantity"] + number))
+            value = str(equipments["Quantity"])
+
+            # replace the value of quantity in txt file
+            with open('read.txt', 'r') as file:
+                filedata = file.read()
+            filedata = filedata.replace(value, replace)
+            with open('read.txt', 'w')as file:
+                file.write(filedata)
             # invoice for returning*************
 
             invoice = f'''==== Invoice of Equipment Return ====
