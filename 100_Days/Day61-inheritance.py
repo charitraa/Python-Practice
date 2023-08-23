@@ -7,5 +7,14 @@ class employee:
         print("value:", self._id, self._name)
 
 
+class programmer(employee):
+    def show(self):
+        print("hii hello")
+
+
 aa = employee("Rohan Das", 40)
 aa.showData()
+
+bb = programmer("ravi", 100)
+bb.show()
+bb.showData()
