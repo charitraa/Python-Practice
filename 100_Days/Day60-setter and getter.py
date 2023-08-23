@@ -43,5 +43,11 @@ class fruit:
 
 
 fd = fruit("mango")
-fd.get_name = "orange"
+fd.get_name = "shrestha"
 print(fd.get_name)
+
+# if __name__ == "__main__":
+
+#     fd = fruit("ravi")
+#     fd.set_name("ravi")
+#     print(fd.get_name())
