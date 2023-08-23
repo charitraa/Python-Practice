@@ -81,6 +81,6 @@ def renting():
                 filevariable.write(invoice)
             print(invoice)  # Print the invoice content
 
-            print("Would u like to add more Equiment ?")
+            again = input("Would u like to add more Equiment ?")
         else:
             print("Sorry, we are out of stock.")
