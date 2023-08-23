@@ -1,11 +1,16 @@
 def returning():
-
+    while True:
+        cname = input("Enter your name: ")
+        if (cname == ""):
+            print("Invalid name")
+        else:
+            break
     cname = input("Enter your name: ")
     try:
         eqname = int(
             input("Enter the corresponding number of the equipment you want to return: "))-1
         equipment_data = []
-        with open("22085414 Jesish Khadka/read.txt", "r") as file:
+        with open("read.txt", "r") as file:
             for line in file:
                 no, name, brand, price, quantity = line.strip().split(", ")
                 equipment = {
@@ -70,10 +75,10 @@ def returning():
             value = str(equipments["Quantity"])
 
             # replace the value of quantity in txt file
-            with open('22085414 Jesish Khadka/read.txt', 'r') as file:
+            with open('read.txt', 'r') as file:
                 filedata = file.read()
             filedata = filedata.replace(value, replace)
-            with open('22085414 Jesish Khadka/read.txt', 'w')as file:
+            with open('read.txt', 'w')as file:
                 file.write(filedata)
             # invoice for returning*************
 
@@ -89,7 +94,7 @@ def returning():
             ===================================
                 '''
             print("overcharge amount= ", overprice)
-            filename = f"22085414 Jesish Khadka/{cname}_return_invoice.txt"
+            filename = f"{cname}_return_invoice.txt"
             with open(filename, "w") as filevaraible:
                 filevaraible.write(invoice)
             print(invoice)

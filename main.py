@@ -25,7 +25,7 @@ def showequip():
         "No.", "Equipment", "Brand", "Price ($)", "Quantity"
     )
     )
-    f = open("22085414 Jesish Khadka/read.txt")
+    f = open("read.txt")
     data = f.readlines()
     f.close()
     headers = data[0].strip().split(",")
