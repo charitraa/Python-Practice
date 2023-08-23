@@ -1,9 +1,9 @@
 ==== Invoice of Renting ====
             Customer Name: rr
             Equipment Details:
-            Name: Dinner Table 8x5
-            Brand: Panda Furnitures
+            Name: Disco Light Set
+            Brand: Sonoff
             Quantity: 5
-            Price per 5 days: $344
+            Price per 5 days: $322
             ==============================================
             
