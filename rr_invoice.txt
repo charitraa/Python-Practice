@@ -1,0 +1,9 @@
+==== Invoice of Renting ====
+            Customer Name: rr
+            Equipment Details:
+            Name: Dinner Table 8x5
+            Brand: Panda Furnitures
+            Quantity: 5
+            Price per 5 days: $344
+            ==============================================
+            
