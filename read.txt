@@ -1,5 +1,5 @@
 1, Velvet Table cloth, Saathi, $8, 5
 2, Microphone Set, Audio Technica, $189, 5
-3, Disco Light Set, Sonoff, $322, 19
+3, Disco Light Set, Sonoff, $322, 14
 4, 7.1 Surround Sound Speaker Set, Dolby, $489, 7
 5, Dinner Table 8x5, Panda Furnitures, $344, 5

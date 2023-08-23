@@ -77,7 +77,7 @@ def renting():
             ==============================================
             '''
             filename = f"{cname}_invoice.txt"
-            with open(filename, "w") as filevariable:
+            with open(filename, "a") as filevariable:
                 filevariable.write(invoice)
             print(invoice)  # Print the invoice content
 
