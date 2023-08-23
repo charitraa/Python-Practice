@@ -6,6 +6,7 @@ def renting():
     main.showequip()
     cname = input("Enter your name: ")
     jeish = True
+    totalprice = 0
     list = {
 
     }
@@ -26,7 +27,6 @@ def renting():
                 equipment_data.append(equipment)
 
         equipments = equipment_data[eqname]
-        list.append(eqname)
         if equipments["Quantity"] > 0:
             rentaldate = datetime.datetime.now()
             while True:
@@ -53,8 +53,8 @@ def renting():
                 rentfor5 += 1
 
             pricee = float(equipments["Price"].replace("$", ""))
-            totalRentPrice = pricee * rentfor5
-            print("Total Price:", totalRentPrice, "$")
+            totalprice += pricee * rentfor5
+            print("Total Price:", totalprice, "$")
             # subtarct the value of quantity with taken quantity
             replace = str((equipments["Quantity"] - number))
             value = str(equipments["Quantity"])
@@ -67,20 +67,20 @@ def renting():
                 file.write(filedata)
 
                 # invoice
+            invoice = f'''==== Invoice of Renting ====
+            Customer Name: {cname}
+            Equipment Details:
+            Name: {equipments['Name']}
+            Brand: {equipments['Brand']}
+            Quantity: {number}
+            Price per 5 days: {equipments['Price']}
+            ==============================================
+            '''
+            filename = f"{cname}_invoice.txt"
+            with open(filename, "w") as filevariable:
+                filevariable.write(invoice)
+            print(invoice)  # Print the invoice content
 
+            print("Would u like to add more Equiment ?")
         else:
             print("Sorry, we are out of stock.")
-
-        invoice = f'''==== Invoice of Renting ====
-        Customer Name: {cname}
-        Equipment Details:
-        Name: {equipments['Name']}
-        Brand: {equipments['Brand']}
-        Quantity: {number}
-        Price per 5 days: {equipments['Price']}
-        ===================================
-        '''
-        filename = f"{cname}_invoice.txt"
-        with open(filename, "w") as filevariable:
-            filevariable.write(invoice)
-        print(invoice)  # Print the invoice content
