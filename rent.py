@@ -5,8 +5,11 @@ import datetime
 def renting():
     main.showequip()
     cname = input("Enter your name: ")
+    jeish = True
+    list = {
 
-    try:
+    }
+    while jeish:
         eqname = int(
             input("Enter the corresponding number of what you want to rent: ")) - 1
         equipment_data = []
@@ -23,6 +26,7 @@ def renting():
                 equipment_data.append(equipment)
 
         equipments = equipment_data[eqname]
+        list.append(eqname)
         if equipments["Quantity"] > 0:
             rentaldate = datetime.datetime.now()
             while True:
@@ -63,7 +67,11 @@ def renting():
                 file.write(filedata)
 
                 # invoice
-                invoice = f'''==== Invoice of Renting ====
+
+        else:
+            print("Sorry, we are out of stock.")
+
+        invoice = f'''==== Invoice of Renting ====
         Customer Name: {cname}
         Equipment Details:
         Name: {equipments['Name']}
@@ -72,12 +80,7 @@ def renting():
         Price per 5 days: {equipments['Price']}
         ===================================
         '''
-            filename = f"{cname}_invoice.txt"
-            with open(filename, "w") as filevariable:
-                filevariable.write(invoice)
-            print(invoice)  # Print the invoice content
-
-        else:
-            print("Sorry, we are out of stock.")
-    except Exception as e:
-        print(e)
+        filename = f"{cname}_invoice.txt"
+        with open(filename, "w") as filevariable:
+            filevariable.write(invoice)
+        print(invoice)  # Print the invoice content
