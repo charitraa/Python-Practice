@@ -16,6 +16,7 @@ print("length:", len(text))
 print("uppercase:", text.upper())
 print("lowercase:", text.lower())
 
+import math
 z = math.factorial(4)
 print(z)
 
