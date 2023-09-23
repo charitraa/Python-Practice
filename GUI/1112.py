@@ -11,4 +11,5 @@ rabi.maxsize(1200, 1200)
 rabi.title("Practise")
 # label
 rabina = Label(text="hello world")
+rabina.pack()
 rabi.mainloop()
