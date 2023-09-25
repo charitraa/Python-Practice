@@ -7,9 +7,9 @@ rabi.title("My first GUI")
 
 def get():
     print("Submitting form...")
-    with open("record.txt", "r") as f:
+    with open("record.txt", "a") as f:
         f.write(
-            f"{name1.get(),phone1.get(),gender1.get(),emergency1.get(),phone1.get(),oiii.get()}")
+            f"{name1.get(),phone1.get(),gender1.get(),emergency1.get(),phone1.get(),oiii.get()}\n")
 
 
 # gui logic
