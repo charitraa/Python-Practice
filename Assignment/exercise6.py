@@ -64,7 +64,7 @@ while True:
     else:
         c = 'high'
 
-    a = int(input(f'enter the nubmber you want to guess which is {c}='))
+    a = int(input(f'enter the number you want to guess which is {c}='))
     if a == b:
         print('you choice correct number')
         break
