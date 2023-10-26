@@ -1,6 +1,6 @@
-from tkinter import *
+import tkinter as tk
 
-rabi = Tk()
+rabi = tk.Tk()
 # size
 rabi.geometry("1000x1000")
 # min size
@@ -10,7 +10,7 @@ rabi.maxsize(1200, 1200)
 # title
 rabi.title("Practise")
 # label
-rabina = Label(text="hello world")
+rabina = tk.Label(text="hello world")
 # to add the label in tkinter
 rabina.pack()
 rabi.mainloop()
