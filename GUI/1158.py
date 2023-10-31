@@ -6,6 +6,7 @@ rabi.title("My first GUI")
 
 
 def get():
+    print(name1)
     print("Submitting form...")
     with open("record.txt", "a") as f:
         f.write(
@@ -40,5 +41,5 @@ oii.grid(row=6, column=3)
 Button(rabi, text="Submit",
        command=get).grid(row=8, column=3)
 
-
+print(name1)
 rabi.mainloop()
