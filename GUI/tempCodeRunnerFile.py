@@ -1,6 +1,5 @@
-# add image file
-# b = PhotoImage(
-#     file="P:\\Code\\Python\\Python Practise\\GUI\\Untitled design (12).png")
-# # add image to label to show
-# ccc = Label(image=b)
-# ccc.pack()
+canvas.pack()
+
+# background_image = tk.PhotoImage(file='2 project.png')
+# background_label = tk.Label(root, image=background_image)
+# background_label.place(relwidth=1, relheight=1)
