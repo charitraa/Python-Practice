@@ -1,63 +1,93 @@
+
 from tkinter import *
-window = Tk()
-window.geometry("500x500")
-window.title("My Ui")
-window.configure(bg="gray")
-
-label = Label(window, text="Registration Form", fg="Black",
-              bg="gray", font=("Times New Roman", 20))
-label.place(x=160, y=20)
+from PIL import ImageTk, Image
 
 
-label2 = Label(window, text="FullName", bg="gray",
-               fg="Black", font=("Times New Roman", 10))
-label2.place(x=80, y=60)
-
-entry = Entry()
-entry.place(x=190, y=60)
-
-label2 = Label(window, text="Email", fg="Black",
-               bg="gray", font=("Times New Roman", 10))
-label2.place(x=80, y=100)
-
-entry1 = Entry()
-entry1.place(x=190, y=100)
-
-label3 = Label(window, text="Gender", fg="Black",
-               bg="gray", font=("Times New Roman", 10))
-label3.place(x=80, y=140)
-
-check_button = Checkbutton(window, text="Male")
-check_button.place(x=190, y=140)
-
-check_button1 = Checkbutton(window, text="Female")
-check_button1.place(x=250, y=140)
-
-label4 = Label(window, text="Country", fg="Black",
-               bg="gray", font=("Times New Roman", 10))
-label4.place(x=80, y=180)
-
-variable = StringVar(window)
-variable.set("Select Country")
-
-option = OptionMenu(window, variable, "Nepal",
-                    "India",
-                    "China",
-                    "Japan")
-option.place(x=190, y=180)
-label5 = Label(window, text="Language", fg="Black",
-               bg="gray", font=("Times New Roman", 10))
-label5.place(x=80, y=220)
-check_button3 = Checkbutton(window, text="English")
-check_button3.place(x=190, y=220)
-
-check_button4 = Checkbutton(window, text="Nepali")
-check_button4.place(x=250, y=220)
-
-button = Button(window, text="Submitt", bg="black", fg="green",
-                activebackground="black", activeforeground="green", state=ACTIVE)
-button.place(x=200, y=300)
+def submit():
+    full_name = enter_1.get()
+    email = enter_3.get()
+    gender = 'male' if vars.get() == 1 else 'female'
+    country = cv.get()
+    language_english = 'english' if vars1.get() == 1 else ''
+    language_nepali = 'nepali' if vars2.get() == 1 else ''
 
 
-window.geometry("500x500")
-window.mainloop()
+# Creating the object 'root' of the Tk()
+root = Tk()
+
+# Using the Geometry method to set certain dimensions
+root.geometry("550x550")
+
+# Using title method to give the title to the window
+root.title('Registration form')
+
+# Now, we will use 'Label' method to add a widget in the Registration Form and also use place() method to set its position.
+lbl_0 = Label(root, text="Registration form", width=20, font=("bold", 20))
+lbl_0.place(x=90, y=60)
+
+# Using 'Label' widget to create Full name label and using place() method to set its position.
+lbl_1 = Label(root, text="FullName", width=20, font=("bold", 10))
+lbl_1.place(x=80, y=130)
+
+# Using Entry widget to make a text entry box for accepting the input string in text from the user.
+enter_1 = Entry(root)
+enter_1.place(x=240, y=130)
+
+# Using 'Label' widget to create Email label and using place() method to set its position.
+lbl_3 = Label(root, text="Email", width=20, font=("bold", 10))
+lbl_3.place(x=68, y=180)
+
+# Using Entry widget to make a text entry box for accepting the input string in text from the user.
+enter_3 = Entry(root)
+enter_3.place(x=240, y=180)
+
+# Using 'Label' widget to create Gender label and using place() method to set its position.
+lbl_4 = Label(root, text="Gender", width=20, font=("bold", 10))
+lbl_4.place(x=70, y=230)
+
+# Using variable 'vars' to store the integer value, which by default is 0
+vars = IntVar()
+
+# Using Radio button widget to create an option choosing button and using place() method to set its position.
+Radiobutton(root, text="Male", padx=5, variable=vars,
+            value=1).place(x=235, y=230)
+Radiobutton(root, text="Female", padx=20,
+            variable=vars, value=2).place(x=290, y=230)
+
+# Using 'Label' widget to create Countries label and using place() method, set its position.
+lbl_5 = Label(root, text="Country", width=20, font=("bold", 11))
+lbl_5.place(x=70, y=280)
+
+# This creates a list of countries available in the dropdown list.
+list_of_cntry = ['Nepal', 'Canada', 'US', 'Germany', 'UK']
+
+# The variable 'cv' is introduced to store the String Value, which by default is (empty) ""
+cv = StringVar()
+drplist = OptionMenu(root, cv, *list_of_cntry)
+drplist.config(width=15)
+cv.set('Select your Country')
+drplist.place(x=240, y=280)
+
+# Using 'Label' widget to create Language label and using place() method, set its position.
+lbl_6 = Label(root, text="Language", width=20, font=('bold', 10))
+lbl_6.place(x=75, y=330)
+
+# The new variable 'vars1' is created to store Integer Value, which by default is 0.
+vars1 = IntVar()
+vars2 = IntVar()
+
+# Using the Checkbutton widget to create a button and using place() method to set its position.
+Checkbutton(root, text="English", variable=vars1).place(x=230, y=330)
+Checkbutton(root, text="Neepali", variable=vars2).place(x=300, y=330)
+
+# Using the Button widget, we get to create a button for submitting all the data that has been entered in the entry boxes of the form by the user.
+submit_button = Button(root, text='Submit', width=20,
+                       bg="black", fg='white', command=submit)
+submit_button.place(x=180, y=380)
+
+# Adding a label to display the result
+result_label = Label(root, text="", font=("bold", 12))
+result_label.place(x=180, y=420)
+
+# Calling the mainloop method to execute the entire program.
+root.mainloop()
