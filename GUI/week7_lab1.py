@@ -3,13 +3,31 @@ from tkinter import *
 from PIL import ImageTk, Image
 
 
+from tkinter import *
+# from PIL import ImageTk, Image
+
+
 def submit():
+    # Get values from entry widgets and variables
     full_name = enter_1.get()
     email = enter_3.get()
-    gender = 'male' if vars.get() == 1 else 'female'
+    gender = "Male" if vars.get() == 1 else "Female"
     country = cv.get()
-    language_english = 'english' if vars1.get() == 1 else ''
-    language_nepali = 'nepali' if vars2.get() == 1 else ''
+    language_english = "english" if vars1.get() == 1 else ""
+    language_nepali = "Nepali" if vars2.get() == 1 else ""
+
+# Display the valuss in the current page(optional)
+    result_label.config(
+        text=f"Full name: {full_name}\n Email:{email}\nGender: {gender}\nCountry: {country}\n Languages: {language_english}, {language_nepali}")
+
+   # Open a new window for the next page
+    new_window = Toplevel(root)
+    new_window.title("Next Page")
+
+    # Display the vlaues in the new window
+    result_label_next_page = Label(
+        new_window, text=f"Full Name: {full_name}\nEmail: {email}\nGender: {gender}\nCountry: {country}\n Languages: {language_english},{language_nepali} ")
+    result_label_next_page.pack()
 
 
 # Creating the object 'root' of the Tk()
